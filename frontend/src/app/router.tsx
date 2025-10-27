@@ -5,6 +5,7 @@ import { RootLayout } from '@/pages/layouts/RootLayout';
 
 const HomePage = lazy(() => import('@/pages/Home'));
 const SimulationPage = lazy(() => import('@/pages/Simulation'));
+const ComparisonPage = lazy(() => import('@/pages/Comparison'));
 const NotFoundPage = lazy(() => import('@/pages/NotFound'));
 
 /**
@@ -21,6 +22,7 @@ const NotFoundPage = lazy(() => import('@/pages/NotFound'));
  * @routing
  * - /: Home page
  * - /simulation: Investment simulation page
+ * - /comparison: Returns comparison page
  * - *: 404 Not Found page
  */
 export const AppRouter = () => {
@@ -30,6 +32,7 @@ export const AppRouter = () => {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<HomePage />} />
           <Route path="simulation" element={<SimulationPage />} />
+          <Route path="comparison" element={<ComparisonPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

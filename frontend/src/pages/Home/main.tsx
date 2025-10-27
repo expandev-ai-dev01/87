@@ -45,12 +45,20 @@ export const HomePage = () => {
               </p>
             </div>
           </div>
-          <button
-            onClick={() => navigate(ROUTES.SIMULATION)}
-            className="px-8 py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors font-medium"
-          >
-            Começar Simulação
-          </button>
+          <div className="flex gap-4 justify-center">
+            <button
+              onClick={() => navigate(ROUTES.SIMULATION)}
+              className="px-8 py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors font-medium"
+            >
+              Simular Investimento
+            </button>
+            <button
+              onClick={() => navigate(ROUTES.COMPARISON)}
+              className="px-8 py-3 bg-success-600 text-white rounded-md hover:bg-success-700 transition-colors font-medium"
+            >
+              Comparar Rentabilidades
+            </button>
+          </div>
         </div>
       </div>
     </div>

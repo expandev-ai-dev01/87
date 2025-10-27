@@ -9,6 +9,7 @@
 export const ROUTES = {
   HOME: '/',
   SIMULATION: '/simulation',
+  COMPARISON: '/comparison',
   NOT_FOUND: '*',
 } as const;
 
