@@ -9,4 +9,4 @@
  * Import services from this file to maintain consistency.
  */
 
-// Services will be added here as features are implemented
+export * from './simulation';

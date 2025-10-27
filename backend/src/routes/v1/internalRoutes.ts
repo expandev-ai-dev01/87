@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import * as simulationController from '@/api/v1/internal/simulation/controller';
+import * as indicatorsController from '@/api/v1/internal/indicators/controller';
 
 const router = Router();
 
@@ -13,10 +15,22 @@ const router = Router();
  * @module internalRoutes
  */
 
-// Authenticated routes will be added here as features are implemented
-// Example:
-// import simulationController from '@/api/v1/internal/simulation/controller';
-// router.get('/simulation', authMiddleware, simulationController.listHandler);
-// router.post('/simulation', authMiddleware, simulationController.createHandler);
+/**
+ * @route POST /simulation
+ * @description Create investment simulation
+ */
+router.post('/simulation', simulationController.postHandler);
+
+/**
+ * @route GET /indicators
+ * @description Get current economic indicators
+ */
+router.get('/indicators', indicatorsController.getHandler);
+
+/**
+ * @route PUT /indicators
+ * @description Update economic indicators (admin only)
+ */
+router.put('/indicators', indicatorsController.putHandler);
 
 export default router;

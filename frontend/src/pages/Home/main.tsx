@@ -1,3 +1,6 @@
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '@/core/constants/routes';
+
 /**
  * @page HomePage
  * @summary Application home page
@@ -14,6 +17,8 @@
  * - Public access
  */
 export const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-4xl w-full text-center">
@@ -25,7 +30,7 @@ export const HomePage = () => {
             Simule diferentes tipos de investimentos, compare rentabilidades, teste estratégias e
             acompanhe seus possíveis resultados ao longo do tempo.
           </p>
-          <div className="grid md:grid-cols-2 gap-6 text-left">
+          <div className="grid md:grid-cols-2 gap-6 text-left mb-8">
             <div className="p-4 bg-primary-50 rounded-lg">
               <h3 className="font-semibold text-primary-900 mb-2">Simulação de Investimentos</h3>
               <p className="text-sm text-primary-700">
@@ -40,6 +45,12 @@ export const HomePage = () => {
               </p>
             </div>
           </div>
+          <button
+            onClick={() => navigate(ROUTES.SIMULATION)}
+            className="px-8 py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors font-medium"
+          >
+            Começar Simulação
+          </button>
         </div>
       </div>
     </div>

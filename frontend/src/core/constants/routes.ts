@@ -8,6 +8,7 @@
 
 export const ROUTES = {
   HOME: '/',
+  SIMULATION: '/simulation',
   NOT_FOUND: '*',
 } as const;
 
