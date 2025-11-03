@@ -26,13 +26,13 @@ jobs:
       - name: npm install, build, and test
         working-directory: ./frontend
         env:
-          VITE_API_URL: https://app-expandev03-api-hom.azurewebsites.net
-          VITE_API_BASE_URL: https://app-expandev03-api-hom.azurewebsites.net
-          REACT_APP_API_URL: https://app-expandev03-api-hom.azurewebsites.net
-          API_BASE_URL: https://app-expandev03-api-hom.azurewebsites.net
+          VITE_API_URL: https://app-expandev01-api-hom.azurewebsites.net
+          VITE_API_BASE_URL: https://app-expandev01-api-hom.azurewebsites.net
+          REACT_APP_API_URL: https://app-expandev01-api-hom.azurewebsites.net
+          API_BASE_URL: https://app-expandev01-api-hom.azurewebsites.net
         run: |
           npm install
-          echo "Building with API URL: https://app-expandev03-api-hom.azurewebsites.net"
+          echo "Building with API URL: https://app-expandev01-api-hom.azurewebsites.net"
           npm run build
           npm run test --if-present -- --passWithNoTests || true
 
